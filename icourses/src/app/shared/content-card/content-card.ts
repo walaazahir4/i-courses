@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-content-card',
+  selector: 'icourse-content-card',
   imports: [],
   templateUrl: './content-card.html',
 })

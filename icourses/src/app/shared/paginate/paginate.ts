@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-paginate',
+  selector: 'icourse-paginate',
   imports: [],
   templateUrl: './paginate.html',
 })

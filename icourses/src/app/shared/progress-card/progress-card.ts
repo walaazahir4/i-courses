@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-progress-card',
+  selector: 'icourse-progress-card',
   imports: [],
   templateUrl: './progress-card.html',
 })

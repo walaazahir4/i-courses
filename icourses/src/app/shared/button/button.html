@@ -1,1 +1,13 @@
-<p>button works!</p>
+<button class="w-full rounded-lg flex justify-center items-center gap-2.5 text-[16px]" 
+        [ngClass]="{
+    'bg-orange-500 btn-class hover:bg-orange-400 text-orang-50 cursor-pointer! !border !border-orang-50': variant() === 'primary' && !disabled(),
+    'border! border-orange-500! btn-secondary hover:border-orange-400 hover:text-orange-400 text-orange-500 bg-white cursor-pointer': variant() ==='secondary' && !disabled(),
+    'py-2 px-4 text-[16px]': size() === 'large',
+    'py-1.5 px-3 text-[14px]': size() === 'medium',
+    'py-1 px-2 text-[12px]': size() === 'small',
+    'bg-gray-100 text-gray-500 !cursor-not-allowed': disabled() && variant() === 'primary',
+    'border border-gray-500 text-gray-500! cursor-not-allowed!': disabled() && variant() === 'secondary'}">
+    <i [class]="`pi pi-${iconName()}`" [ngClass]="{'hidden!': icon() === false}"></i>
+
+    {{text()}}
+</button>

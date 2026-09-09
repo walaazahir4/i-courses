@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-why',
+  selector: 'icourse-why',
   imports: [],
   templateUrl: './why.html',
 })

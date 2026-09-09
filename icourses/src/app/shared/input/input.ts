@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-input',
+  selector: 'icourse-input',
   imports: [],
   templateUrl: './input.html',
 })

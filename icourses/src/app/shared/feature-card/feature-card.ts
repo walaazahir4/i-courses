@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-feature-card',
+  selector: 'icourse-feature-card',
   imports: [],
   templateUrl: './feature-card.html',
 })

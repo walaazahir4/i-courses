@@ -1,0 +1,17 @@
+@layer components{
+
+    .btn-class:focus{
+        @apply bg-orange-800!;
+    }
+.btn-secondary:focus{
+    @apply text-orange-800! bg-none! border-orange-800!;
+}
+
+
+
+
+
+
+
+
+}

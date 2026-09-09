@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ai-card',
+  selector: 'icourse-ai-card',
   imports: [],
   templateUrl: './ai-card.html',
 })

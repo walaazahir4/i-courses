@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-about',
+  selector: 'icourse-about',
   imports: [],
   templateUrl: './about.html',
 })

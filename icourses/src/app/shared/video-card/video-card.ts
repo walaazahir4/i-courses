@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-video-card',
+  selector: 'icourse-video-card',
   imports: [],
   templateUrl: './video-card.html',
 })

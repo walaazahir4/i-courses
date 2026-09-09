@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-error',
+  selector: 'icourse-error',
   imports: [],
   templateUrl: './error.html',
 })

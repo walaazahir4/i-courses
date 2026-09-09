@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-signin',
+  selector: 'icourse-signin',
   imports: [],
   templateUrl: './signin.html',
 })

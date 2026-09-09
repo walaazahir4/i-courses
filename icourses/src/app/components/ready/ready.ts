@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-ready',
+  selector: 'icourse-ready',
   imports: [],
   templateUrl: './ready.html',
 })

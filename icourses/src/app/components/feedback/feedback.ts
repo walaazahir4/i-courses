@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-feedback',
+  selector: 'icourse-feedback',
   imports: [],
   templateUrl: './feedback.html',
 })

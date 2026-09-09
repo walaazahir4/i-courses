@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-breadcrumb',
+  selector: 'icourse-breadcrumb',
   imports: [],
   templateUrl: './breadcrumb.html',
 })
