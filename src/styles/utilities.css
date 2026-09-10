@@ -7,7 +7,9 @@
     @apply text-orange-800! bg-none! border-orange-800!;
 }
 
-
+input:focus{
+    @apply  !border-none !outline-none;
+}
 
 
 

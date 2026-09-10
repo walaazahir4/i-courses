@@ -1,7 +1,7 @@
 <div class="p-5">
 <icourse-ai-card></icourse-ai-card>
 
-<div class="flex gap-5">
+<div class="flex flex-col gap-5">
     <icourse-button [size]="'large'" [icon]="true"></icourse-button>
     <icourse-button [size]="'large'" [disabled]="true"></icourse-button>
     <icourse-button [size]="'medium'"></icourse-button>
@@ -15,6 +15,16 @@
     <icourse-button [variant]="'secondary'" [size]="'small'"></icourse-button>
     <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true"></icourse-button>
     <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true" [icon]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" 
+                    [iconRight]="true"
+                    [iconRightName]="'heart'" 
+                    [iconName]="'plus'"
+                    [icon]="true"
+                    [twoIcons]="false"></icourse-button>
     
+</div>
+
+<div class="flex-1 gap-5 w-full p-6">
+<icourse-input></icourse-input>    
 </div>
 </div>
