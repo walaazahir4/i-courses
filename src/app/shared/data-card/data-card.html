@@ -1,1 +1,76 @@
-<p>data-card works!</p>
+<div
+    class="relative bg-white flex justify-between w-fit items-center gap-5 rounded-lg p-4 border-[0.5px] border-gray-200 h-65.75">
+    <div class="overflow-hidden rounded-sm  h-full" [ngClass]="{'w-84': type() === 'small',
+                     'w-112.5': type() === 'large'
+         }">
+        <img [src]="img()" alt="picture" class="w-full h-full object-cover rounded-sm">
+    </div>
+
+    <div class="h-full  flex flex-col justify-between" [ngClass]="{'w-full max-w-89.5': type() === 'small',
+                     'w-full max-w-127.25': type() === 'large'}">
+        <div>
+            <p class="font-semibold text-[18px] text-blue-hue-950">
+                {{title()}}
+            </p>
+        </div>
+        <div class="flex gap-2">
+            <p class="text-blue-hue-900 text-[12px] flex items-center gap-2">
+                {{numberOfRate()}}
+
+                <span class="flex items-center gap-1">
+                    <i class="pi pi-star-fill text-[#EAB308]"></i>
+                    <i class="pi pi-star-fill text-[#EAB308]"></i>
+                    <i class="pi pi-star-fill text-[#EAB308]"></i>
+                    <i class="pi pi-star-fill text-[#EAB308]"></i>
+                    <i class="pi pi-star text-[#EAB308]"></i>
+                </span>
+            </p>
+            <p class="text-[12px] text-gray-400">
+                ({{number()}})
+            </p>
+            <div class="bg-blue-hue-700 rounded-sm flex gap-2 py-1 px-3">
+                <p class="text-center text-white text-[12px]">
+                    {{status()}}
+                </p>
+            </div>
+        </div>
+        <div>
+            <p class="text-[16px] text-gray-600">
+                {{desc()}}
+            </p>
+        </div>
+        <div>
+            <p class="text-[16px] text-gray-600">
+                {{time()}} ساعات &bull; {{level()}} محاضرة &bull; {{lec()}}
+            </p>
+        </div>
+        <div class="flex justify-between" [ngClass]="{'w-full max-w-90': type() === 'large'}">
+            <p class="text-blue-hue-600 text-[16px] font-semibold">
+                المدرب: {{instructor()}}
+            </p>
+            <p class="text-blue-hue-600 text-[16px] font-semibold">
+                اخر تحديث {{lastUpdate()}}
+            </p>
+        </div>
+    </div>
+
+    <div class="flex flex-col h-full justify-between items-end">
+        <p class="text-orange-500 font-bold text-[24px]">
+            {{price()}}
+        </p>
+        <icourse-button [text]="'سجل الان'"></icourse-button>
+    </div>
+    @if (paginate()) {
+    <!-- Right arrow -->
+    <button
+        class="absolute cursor-pointer right-[-20px] top-1/2 -translate-y-1/2 w-15 h-15 rounded-full bg-white border border-gray-200 shadow flex items-center justify-center">
+        <i class="pi pi-chevron-right text-blue-hue-950 font-bold text-[20px]!"></i>
+    </button>
+
+    <!-- Left arrow -->
+    <button
+        class="absolute cursor-pointer left-[-20px] top-1/2 -translate-y-1/2 w-15 h-15 rounded-full bg-white border border-gray-200 shadow-[0px_2px_4px_2px_#0000001A,0px_4px_6px_1px_#0000001A] flex items-center justify-center">
+        <i class="pi pi-chevron-left text-blue-hue-950 font-bold text-[20px]!"></i>
+    </button>
+    }
+</div>

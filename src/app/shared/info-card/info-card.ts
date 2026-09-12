@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'icourse-info-card',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './info-card.html',
 })
 export class InfoCard {
-
+title = input<string>(' المحتوى العملي ')
+icon = input<string>('book')
+desc = input<string>('مشاريع العالم الحقيقي و تمارين تعدك للتصميم الاحترافي عمل.')
 }

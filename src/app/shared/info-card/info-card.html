@@ -1,1 +1,14 @@
-<p>info-card works!</p>
+<div class="group bg-white border-[0.5px] border-gray-200 rounded-lg px-4 py-12 flex flex-col justify-center items-center gap-5 w-fit hover:bg-[#F4F5FB] hover:shadow-[0px_4px_8px_0px_#00000040]">
+<div class="rounded-full bg-blue-100 w-25 h-25 flex justify-center items-center transition-transform duration-500 transform-3d group-hover:transform-[rotateX(180deg)]">
+    <i [class]="`pi pi-${icon()} text-blue-500 text-[40px]!`"></i>
+</div>
+
+<div class="flex flex-col gap-3 text-center w-full max-w-62">
+    <p class="text-blue-800 font-bold text-[18px]">
+        {{title()}}
+    </p>
+    <p class="text-gray-600 text-[16px]">
+        {{desc()}}
+    </p>
+</div>
+</div>

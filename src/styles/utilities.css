@@ -11,9 +11,23 @@ input:focus{
     @apply  !border-none !outline-none;
 }
 
+.input-parent:focus-within{
+    @apply !border !border-orange-400;
+}
+.input-parent:focus-within i {
+    @apply text-black!;
+  }
+.input-parent.filled {
+  @apply !border !border-green-500;
+}
 
+.input-child.filled {
+  @apply !border !border-green-500;
+}
 
-
+.input-parent:has(input:not(:placeholder-shown)) {
+  @apply !border !border-green-500;
+}
 
 
 }

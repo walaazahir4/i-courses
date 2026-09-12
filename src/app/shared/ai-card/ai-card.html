@@ -1,1 +1,22 @@
-<p>ai-card works!</p>
+<div class="border-[0.5px] border-gray-200 rounded-lg p-2 w-full max-w-144.25 flex flex-col gap-6">
+    <div class="w-fit">
+        <img [src]="img()" alt="ai image" class="object-cover object-top w-140.25 h-50.75 rounded-sm">
+    </div>
+
+    <div class="flex flex-col gap-6">
+        <div class="flex justify-between items-center">
+            <p class="text-gray-200 text-[14px]">
+                {{date()}}
+            </p>
+            <p class="text-blue-hue-800 font-bold text-[20px]">
+           {{title()}}
+        </p>
+        </div>
+
+         <p class="text-gray-500 text-[18px] font-semibold">
+                {{desc()}}
+            </p>
+
+            <icourse-button [text]="btnText()"></icourse-button>
+    </div>
+</div>

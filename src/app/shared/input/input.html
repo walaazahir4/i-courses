@@ -1,9 +1,32 @@
-<div class="w-full flex flex-col ">
-    <label for="">
-        {{label()}} hghgh
+<div class="w-full flex flex-col gap-2">
+    <label for="" class="font-semibold text-[18px] text-blue-hue-950">
+        {{label()}}
     </label>
-    <div class="border flex items-center gap-2 h-full border-gray-500 rounded-sm p-4">
-        <i class="pi pi-user"></i>
-        <input [type]="'type()'" class="flex-1" [placeholder]="'placeholder()'">
+    <div class="border input-parent flex justify-between bg-white items-center h-full border-gray-500 rounded-sm "
+          [ngClass]="{'bg-gray-100 text-gray-500 border-none cursor-not-allowed': disabled() === true,
+          'border-red-600': error() === true,
+          'p-4': size() === 'large', 
+          'py-3 px-4': size() === 'medium', 
+          'py-2 px-3': size() === 'small', 
+          }">
+        <div class="flex items-center gap-2 flex-1">
+            <i [class]="`pi pi-${leftIconName()} text-gray-500`" 
+               [ngClass]="{'hidden!': leftIcon() === false}"></i>
+        <input [type]="inputType()" class="flex-1" [placeholder]="placeholder()"
+        [ngClass]="{'cursor-not-allowed': disabled() === true,
+                    'filled': value}"
+        [disabled]="disabled()"
+        >
+        </div>
+        <div [ngClass]="{'hidden': rightIcon() === false}">
+            <i [class]="`pi pi-${rightIconName()} text-gray-500`"></i>
+        </div>
     </div>
+    @if(error()){
+        <div>
+        <p class="text-red-600">
+            {{errorText()}}
+        </p>
+    </div>
+    }
 </div>

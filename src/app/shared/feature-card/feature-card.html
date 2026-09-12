@@ -1,1 +1,53 @@
-<p>feature-card works!</p>
+<div class="bg-white border-[0.5px] border-gray-200 rounded-lg w-fit hover:shadow-[0px_4px_6px_0px_#00000040]">
+    <div class="overflow-hidden rounded-tr-lg rounded-tl-lg w-101.5 h-43">
+        <img [src]="img()" alt="image" class="">
+    </div>
+
+    <div class="flex flex-col gap-4 px-4 py-2 w-full max-w-101.5">
+        <div class="flex justify-between items-center">
+            <p class="font-bold text-[18px] text-blue-hue-800">
+                {{title()}}
+            </p>
+            <div class="flex gap-1">
+                <i class="pi pi-star-fill text-[#EAB308]"></i>
+                <i class="pi pi-star-fill text-[#EAB308]"></i>
+                <i class="pi pi-star-fill text-[#EAB308]"></i>
+                <i class="pi pi-star-fill text-[#EAB308]"></i>
+                <i class="pi pi-star text-[#EAB308]"></i>
+            </div>
+        </div>
+
+        <div class="bg-[#DBEAFE] rounded-lg py-0.75 px-1.5 flex gap-2 w-fit">
+            <p class="text-gray-500 text-[12px]">
+                {{status()}}
+            </p>
+        </div>
+        <div>
+        <p class="text-gray-600 text-[16px] ">
+                {{desc()}}
+            </p>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="flex items-center gap-2 ">
+                <i class="pi pi-clock text-gray-600"></i>
+                <span class="text-gray-600 text-[14px]">
+                    {{numWeeks()}} أسابيع
+                </span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="pi pi-book text-gray-600"></i>
+                <span class="text-gray-600 text-[14px]">
+                    {{numLesson()}} درسا</span>
+            </div>
+        </div>
+          <div class="pb-2 flex justify-between items-center">
+                <p class="text-orange-500 font-bold text-[24px]">
+                    {{price()}}
+                </p>
+                <div class="w-full max-w-46.25">
+                    <icourse-button [text]="btnText()"></icourse-button>
+                </div>
+            </div>
+    </div>
+
+</div>

@@ -1,1 +1,42 @@
-<p>progress-card works!</p>
+<div class="flex rounded-lg border-[0.5px] border-gray-200 overflow-hidden w-fit hover:bg-blue-hue-50 hover:shadow-[0px_4px_6px_0px_#00000040]!"
+[ngClass]="{'flex-row': direction() === 'imgLeft',
+            'flex-row-reverse': direction() === 'imgRight'
+}">
+<!--  -->
+    <div class="flex flex-col gap-4 justify-between p-5 w-full max-w-76.25"
+         [ngClass]="{'w-full max-w-98': direction() === 'imgRight'}">
+        <div class="flex flex-col gap-3">
+            <div class="flex justify-between">
+                <p class="font-bold text-[18px] text-blue-hue-800 text-nowrap">
+                {{text()}}
+            </p> @if(direction() === 'imgRight'){
+                <span class="text-gray-400">
+                    {{date()}}
+                </span>
+            }
+            </div>
+            <p class="text-gray-500  font-semibold">
+                {{desc() }}
+            </p>
+            <div class="flex gap-2 items-center"
+                 [ngClass]="{'hidden': variant() === 'pic'}">
+                <i class="pi pi-clock text-gray-400"></i>
+                <span class="text-gray-400">4 ساعات متبقية</span>
+            </div>
+            <div [ngClass]="{'hidden': variant() === 'video' || direction() === 'imgRight'}">
+                <p-progressbar [value]="progress()"></p-progressbar>
+            <div class="flex justify-end mt-2">
+                <span class="text-gray-400 text-[16px]"> تقدم {{ progress() }}%</span>
+            </div>
+            </div>
+        </div>
+        <icourse-button [text]="btnText()"></icourse-button>
+    </div>
+    <div class="overflow-hidden">
+        <img [src]="img()" alt="" class="w-63.75 h-full min-h-61"
+             [ngClass]="{'hidden': variant() === 'video'}">
+           <iframe class="w-63.75 h-full min-h-61 object-cover" [src]="youtubeUrl()" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+           [ngClass]="{'hidden': variant() === 'pic'}"></iframe>
+
+    </div>
+</div>

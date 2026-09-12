@@ -1,1 +1,43 @@
-<p>hero works!</p>
+<section class="relative min-h-150 w-full bg-cover bg-center" 
+         style="background-image: url('/images/heroImg.jpg');">
+    <div class="absolute inset-0 bg-white/80"></div>
+
+    <div class="relative z-10 flex min-h-150 flex-col items-center justify-center px-4 text-center">
+        <div class="mb-6 flex items-center gap-3">
+            <div class="flex -space-x-3 rtl:space-x-reverse">
+                <img src="/images/join1.jpg" alt="Student"
+                    class="h-10 w-10 rounded-full border-2 border-white object-cover" />
+
+                <img src="/images/join2.jpg" alt="Student"
+                    class="h-10 w-10 rounded-full border-2 border-white object-cover" />
+
+                <img src="/images/join3.jpg" alt="Student"
+                    class="h-10 w-10 rounded-full border-2 border-white object-cover" />
+            </div>
+            <p class="text-[24px] font-bold text-gray-600">
+                انضم لأكثر من 15,000 طالب عربي حول العالم
+            </p>
+        </div>       
+        <div class="w-full max-w-302.25">
+        <!-- <div class="max-w-180"> -->
+            <p class="text-[32px] font-bold leading-tight text-blue-950">
+                تعلم تصميم واجهة المستخدم / تجربة المستخدم من خبراء المجال بالتطبيق العملي و المتابعه ! 
+            </p>
+            <p class="mt-5 text-[24px] leading-8 text-gray-800">
+
+                تعلم من خبراء الصناعة وقم ببناء محفظة اعمال احترافية من خلال دورات التصميم الشاملة و تحسين حياتك المهنية
+                من خلال عملية المهارات التي يبحث عنها أصحاب العمل.
+            </p>
+        </div>
+        <div class="flex w-full max-w-123.5 justify-between items-center mt-8">
+           <div class="w-full max-w-59.25">
+             <icourse-button [text]="'ابدأ التعلم الآن'"></icourse-button>
+             </div>
+                        <div class="w-full max-w-59.25">
+
+            <icourse-button [text]="'تسجيل الدخول'"
+            [variant]="'secondary'"></icourse-button></div>
+        </div>
+
+    </div>
+</section>

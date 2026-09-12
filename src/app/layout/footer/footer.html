@@ -1,1 +1,77 @@
-<p>footer works!</p>
+<footer class="p-8 bg-blue-900 w-full flex flex-col gap-8">
+    <div class="flex justify-between items-center gap-8 border-b border-gray-400 pb-8">
+        <div class="flex flex-col gap-8 w-full max-w-[257.080078125px]">
+            <div>
+                <img src="./images/logoFooter.png" alt="logo" class="w-17.5 h-13.5">
+            </div>
+
+            <p class="text-gray-400 text-[18px]">
+                نحن في مهمة لصنع UI / UX
+                تصميم التعليم في متناول اليد
+                الجميع مع دورات عملية
+                يدرسه خبراء الصناعة.
+            </p>
+
+            <div class="flex gap-4">
+                @for(icon of icons; track $index){
+                <div class="flex justify-center items-center bg-blue-800 rounded-full py-2.25 px-2.5 w-10">
+                    <i [class]="`pi pi-${icon.name} text-blue-400 text-[25px]!`"></i>
+                </div>
+                }
+            </div>
+
+        </div>
+        <div class="flex flex-col gap-4">
+            <p class="text-[24px] text-white">
+                الروابط السريعة
+            </p>
+            <ul class="flex flex-col gap-4">
+                @for(list of lists; track $index){
+                <li class="text-gray-400 text-[16px]"><a href="list.link">
+                        {{list.text}}
+                    </a></li>
+                }
+            </ul>
+        </div>
+        <div class="flex flex-col gap-4">
+            <p class="text-[24px] text-white">
+                الدعم </p>
+            <ul class="flex flex-col gap-4">
+                @for(supp of supports; track $index){
+                <li class="text-gray-400 text-[16px]"><a href="supp.link">
+                        {{supp.text}}
+                    </a></li>
+                }
+            </ul>
+        </div>
+        <div class="flex flex-col gap-4  w-full max-w-93.25">
+            <p class="text-[24px] text-white">
+                الاشتراك في نشرتنا الإخبارية </p>
+
+            <p class="text-gray-400 text-[16px]">
+                احصل على أحدث نصائح التصميم والاتجاهات ، وتحديثات الدورة التدريبية التي يتم تسليمها إلى صندوق الوارد
+                الخاص بك.
+            </p>
+
+            <div class="flex justify-between items-center gap-3">
+                <div class="flex-1  gap-3">
+                    <icourse-input [placeholder]="'أدخل البريد الالكتروني'" [inputType]="'email'" [label]="''"
+                        [size]="'small'"></icourse-input>
+                </div>
+                <icourse-button [text]="'اشتراك'"></icourse-button>
+            </div>
+            <p class="text-gray-400 text-[16px] ">
+                من خلال الاشتراك ، فإنك توافق على خصوصيتنا السياسة والموافقة على تلقي التحديثات.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center">
+        <p class="text-[#6B7280] text-[16px]"> جميع الحقوق محفوظه &bull; 2025 icourse ©</p>
+        <ul class="text-[#6B7280] text-[16px] flex flex-row gap-2.5">
+            <li> <a href="">الشروط</a>  </li>
+            <li> <a href="">الخصوصية</a> </li>
+            <li> <a href="">ملفات تعريف الارتباط </a> </li>
+        </ul>
+    </div>
+</footer>
