@@ -1,1 +1,20 @@
-<p>ready works!</p>
+<div class="bg-blue-600 p-20 flex flex-col justify-center items-center gap-10">
+    <div class="flex flex-col justify-center items-center gap-4">
+        <p class="text-white font-bold text-[32px]"> هل أنت مستعد لبدء رحلة التصميم الخاصة بك؟ </p>
+        <p class="text-gray-500 text-[18px]">
+            انضم إلى آلاف الطلاب الذين غيروا حياتهم المهنية مع دورات تصميم UI / UX الشاملة.
+        </p>
+    </div>
+
+    <div class="flex lg:flex-row flex-col justify-between gap-3 items-center w-full max-w-89">
+        <div class="flex-1 w-full">
+            <icourse-button [text]="'سجل الان'"></icourse-button>
+        </div>
+
+        <div class="flex-1 w-full">
+            <icourse-button [text]="'عرض جميع الدورات'"
+                            [variant]="'secondary'"></icourse-button>
+
+        </div>
+    </div>
+</div>

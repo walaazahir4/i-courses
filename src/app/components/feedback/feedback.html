@@ -1,1 +1,22 @@
-<p>feedback works!</p>
+<div class="flex flex-col justify-center items-center gap-13 py-8">
+    <div class="flex flex-col justify-center items-center gap-4">
+        <p class="text-blue-hue-950 font-bold text-[32px]"> ماذا يقول طلابنا !</p>
+        <p class="text-gray-500 text-[18px] text-center lg:p-0 p-3">استمع إلى طلابنا الذين غيروا حياتهم المهنية من خلال دوراتنا.</p>
+    </div>
+
+    <div class="w-full max-w-327.5 flex justify-center gap-3 "
+          [ngClass]="{'overflow-hidden': !showAll(),
+                      'flex-wrap': showAll()}">
+        @for(card of showAll() ? cards: cards.slice(0, 4); track $index){
+        <icourse-feedback-card [img]="card.img"
+                                [desc]="card.desc"
+                                [name]="card.name"
+                                [content]="card.content"></icourse-feedback-card>
+        }
+    </div>
+    <div class="w-full max-w-59.25">
+
+        <icourse-button [variant]="'secondary'" [text]="'اظهار المزيد من الاراء'"
+            (click)="showAll.set(true)"></icourse-button>
+    </div>
+</div>

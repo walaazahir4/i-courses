@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'icourse-atom-card',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './atom-card.html',
 })
 export class AtomCard {
-
+text = input<string>(' تطبيق هاتف')
 }

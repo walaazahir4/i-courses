@@ -1,20 +1,19 @@
 <div class="flex flex-col justify-center items-center gap-13 py-8">
     <div class="flex flex-col justify-center items-center gap-4">
         <p class="text-blue-hue-950 font-bold text-[32px]">مسارات التعلم! </p>
-        <p class="text-gray-500 text-[18px]">اختر رحلة التعلم الخاصة بك من مساراتنا المصممة بعناية والمصممة لتأخذك منها
+        <p class="text-gray-500 text-[18px] lg:p-0 p-3 text-center">اختر رحلة التعلم الخاصة بك من مساراتنا المصممة بعناية والمصممة لتأخذك منها
             من المبتدئين إلى المحترفين.</p>
     </div>
 
-    <div class="w-full max-w-327.5 flex gap-3 "
+    <div class="w-full justify-center max-w-327.5 flex flex-col lg:flex-row gap-3 "
           [ngClass]="{'overflow-hidden': !showAll(),
                       'flex-wrap': showAll()}">
         @for(card of showAll() ? cards: cards.slice(0, 4); track $index){
-        <icourse-feature-card [img]="card.img"></icourse-feature-card>
+        <icourse-feature-card class="flex justify-center" [img]="card.img"></icourse-feature-card>
         }
 
     </div>
     <div class="w-full max-w-59.25">
-
         <icourse-button [variant]="'secondary'" [text]="'عرض جميع الدورات'"
             (click)="showAll.set(true)"></icourse-button>
     </div>

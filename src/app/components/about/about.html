@@ -1,1 +1,32 @@
-<p>about works!</p>
+<div class="flex flex-col justify-center items-center gap-13 py-8 bg-blue-hue-50">
+    <div class="flex flex-col justify-center items-center gap-4">
+        <p class="text-blue-hue-950 font-bold text-[32px]">
+            تعرف على مدربينا الخبراء!
+        </p>
+        <p class="text-gray-500 text-[18px] text-center lg:p-0 p-3">
+            تعلم من المتخصصين في الصناعة الذين يتمتعون بسنوات من الخبرة في أفضل شركات التصميم في كل أنحاء العالم.
+        </p>
+    </div>
+
+    <div class="relative w-full max-w-338">
+        <div class="flex flex-col lg:flex-row justify-center gap-8 items-center">
+            @for(card of cards; track $index){
+            <icourse-person-card [img]="card.img" [name]="card.name" [position]="card.position"
+                [desc]="card.desc"></icourse-person-card>
+            }
+        </div>
+        <div
+            class="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 pt-1 flex justify-center items-center">
+            <button class="cursor-pointer"> 
+                <i class="pi pi-chevron-right text-[23px]! font-semibold text-blue-hue-950"></i> 
+            </button>
+        </div>
+
+         <div
+            class="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 pt-1 flex justify-center items-center">
+            <button class="cursor-pointer"> 
+                <i class="pi pi-chevron-left text-[23px]! font-semibold text-blue-hue-950"></i> 
+            </button>
+        </div>
+    </div>
+</div>
