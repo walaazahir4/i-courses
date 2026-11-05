@@ -3,10 +3,12 @@ import { Test } from './components/test/test';
 import { Layout } from './layout/layout/layout';
 import { Error } from './components/error/error';
 import { LandingPage } from './pages/landing-page/landing-page';
+import { Courses } from './components/masar/courses/courses';
 
 export const routes: Routes = [
     {path: '', component: Layout},
     {path: 'test', component: Test},
     {path: 'landing-page', component: LandingPage},
+    {path: 'courses', component: Courses},
     {path: '**', component: Error}
 ];

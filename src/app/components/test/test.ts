@@ -12,10 +12,11 @@ import { Error } from "../error/error";
 import { Login } from "../login/login";
 import { WelcomeCard } from "../../shared/welcome-card/welcome-card";
 import { AtomCard } from "../../shared/atom/atom-card/atom-card";
+import { Courses } from '../masar/courses/courses';
 
 @Component({
   selector: 'icourse-test',
-  imports: [AiCard, Button, Input, PersonCard, ProgressCard, InfoCard, FeedbackCard, DataCard, FeatureCard, Login, WelcomeCard, AtomCard],
+  imports: [AiCard, Button, Input, PersonCard, ProgressCard, InfoCard, FeedbackCard, DataCard, FeatureCard, Login, WelcomeCard, AtomCard, Courses],
   templateUrl: './test.html',
 })
 export class Test {

@@ -3,7 +3,7 @@
 @import "tailwindcss";
 @import "./styles/colors.css";
 @import "./styles/utilities.css";
-@import "primeicons/primeicons.css";
+/* @import "primeicons/primeicons.css"; */
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -13,6 +13,3 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: black !important;
 }
 
-/* body{
-  background-color: var(--color-blue-hue-50);
-} */

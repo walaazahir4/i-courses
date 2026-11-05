@@ -10,22 +10,22 @@
 
     <div class="relative w-full max-w-338">
         <div class="flex flex-col lg:flex-row justify-center gap-8 items-center">
-            @for(card of cards; track $index){
+            @for(card of visibleCards; track $index){
             <icourse-person-card [img]="card.img" [name]="card.name" [position]="card.position"
                 [desc]="card.desc"></icourse-person-card>
             }
         </div>
-        <div
+        <div (click)="previousPage()"
             class="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 pt-1 flex justify-center items-center">
-            <button class="cursor-pointer"> 
-                <i class="pi pi-chevron-right text-[23px]! font-semibold text-blue-hue-950"></i> 
+            <button class="cursor-pointer">
+                <i class="pi pi-chevron-right text-[23px]! font-semibold text-blue-hue-950"></i>
             </button>
         </div>
 
-         <div
+        <div (click)="nextPage()"
             class="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 bg-white rounded-full w-10 h-10 pt-1 flex justify-center items-center">
-            <button class="cursor-pointer"> 
-                <i class="pi pi-chevron-left text-[23px]! font-semibold text-blue-hue-950"></i> 
+            <button class="cursor-pointer">
+                <i class="pi pi-chevron-left text-[23px]! font-semibold text-blue-hue-950"></i>
             </button>
         </div>
     </div>
