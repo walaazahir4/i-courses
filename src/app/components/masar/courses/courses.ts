@@ -1,27 +1,23 @@
 import { Component, signal } from '@angular/core';
 import { DataCard } from '../../../shared/data-card/data-card';
+import { Filter } from '../../../shared/filter/filter';
 
 @Component({
   selector: 'icourse-courses',
-  imports: [DataCard],
+  imports: [DataCard, Filter],
   templateUrl: './courses.html',
 })
 export class Courses {
-  isOpen = signal(false);
 isFilterOpen = signal(false);
-isSortOpen = signal(false);
-  selectedSort = signal('فرز');
+isFilterPanelOpen = signal(false);
 
 toggleFilter() {
   this.isFilterOpen.update(value => !value);
-  this.isSortOpen.set(false);
 }
 
-toggleSort() {
-  this.isSortOpen.update(value => !value);
-  this.isFilterOpen.set(false);
+toggleFilterPanel() {
+  this.isFilterPanelOpen.update(value => !value);
 }
-  toggleDropdown() {
-    this.isOpen.update(value => !value);
-  }
+
+
 }

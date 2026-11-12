@@ -30,4 +30,9 @@ input:focus{
 }
 
 
+.animate-test {
+@apply animate-[fadeSlideIn_2s_ease-in-out_both]}
+
+
 }
+

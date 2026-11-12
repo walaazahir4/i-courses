@@ -1,0 +1,47 @@
+<aside
+  class="w-full max-w-96 p-4"
+  dir="rtl"
+  aria-label="تصفية الكورسات">
+  <div class="flex flex-col gap-3">
+    @for (group of groups; track group.id) {
+      <section class="flex flex-col gap-0.5">
+        <button
+          type="button"
+          class="flex h-[51px] w-full items-center justify-between rounded-lg border border-gray-200 bg-white px-4 text-right text-xl font-semibold text-slate-900"
+          [attr.aria-expanded]="isOpen(group.id)"
+          (click)="toggleGroup(group.id)">
+          <span>{{ group.title }}</span>
+          <span class="text-xl font-normal leading-none" aria-hidden="true">{{ isOpen(group.id) ? '⌃' : '⌄' }}</span>
+        </button>
+
+        @if (isOpen(group.id)) {
+          <div class="rounded-lg border border-gray-200 bg-white px-3 py-2">
+            @for (option of visibleOptions(group); track option.label) {
+              <label class="flex min-h-[47px] cursor-pointer items-center gap-2 text-base text-slate-900">
+                <input
+                  type="checkbox"
+                  class="h-5 w-5 shrink-0 cursor-pointer accent-orange-500"
+                  [checked]="isSelected(group.id, option.label)"
+                  (change)="toggleOption(group.id, option.label)" />
+                <span>{{ option.label }}</span>
+                @if (option.count !== undefined) {
+                  <span class="text-gray-500">({{ option.count }})</span>
+                }
+              </label>
+            }
+            @if (group.options.length > group.initialCount) {
+              <button
+                type="button"
+                class="flex min-h-8 w-full items-center justify-between text-sm font-medium text-orange-500"
+                [attr.aria-expanded]="isMore(group.id)"
+                (click)="toggleMore(group.id)">
+                <span>{{ isMore(group.id) ? 'أقل' : 'المزيد' }}</span>
+                <span class="text-lg text-slate-900" aria-hidden="true">{{ isMore(group.id) ? '⌃' : '⌄' }}</span>
+              </button>
+            }
+          </div>
+        }
+      </section>
+    }
+  </div>
+</aside>

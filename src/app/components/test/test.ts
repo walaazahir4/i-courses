@@ -8,15 +8,16 @@ import { InfoCard } from "../../shared/info-card/info-card";
 import { FeedbackCard } from "../../shared/feedback-card/feedback-card";
 import { DataCard } from "../../shared/data-card/data-card";
 import { FeatureCard } from "../../shared/feature-card/feature-card";
-import { Error } from "../error/error";
 import { Login } from "../login/login";
 import { WelcomeCard } from "../../shared/welcome-card/welcome-card";
 import { AtomCard } from "../../shared/atom/atom-card/atom-card";
 import { Courses } from '../masar/courses/courses';
+import { Filter } from '../../shared/filter/filter';
+
 
 @Component({
   selector: 'icourse-test',
-  imports: [AiCard, Button, Input, PersonCard, ProgressCard, InfoCard, FeedbackCard, DataCard, FeatureCard, Login, WelcomeCard, AtomCard, Courses],
+  imports: [AiCard, Button, Input, PersonCard, ProgressCard, InfoCard, FeedbackCard, DataCard, FeatureCard, Login, WelcomeCard, AtomCard, Courses, Filter],
   templateUrl: './test.html',
 })
 export class Test {

@@ -1,91 +1,95 @@
 <div class="p-5">
-    <icourse-courses></icourse-courses>
-    <div class="w-full">
-        <p>welcome-card</p>
-      <icourse-welcome-card></icourse-welcome-card>
-    </div> 
+   <div class="w-full">
+    <icourse-filter></icourse-filter>
+  </div>
+  <icourse-courses></icourse-courses>
+  <div class="w-full">
+    <p>welcome-card</p>
+    <icourse-welcome-card></icourse-welcome-card>
+  </div>
 
-     <div class="w-full">
-        <p>welcome-card</p>
-      <icourse-atom-card></icourse-atom-card>
-    </div> 
-    <!-- <icourse-error></icourse-error> -->
-     <icourse-login></icourse-login>
-    <div class="flex flex-col gap-5">
-        <p>buttons</p>
-        <icourse-button [size]="'large'" [icon]="true"></icourse-button>
-        <icourse-button [size]="'large'" [disabled]="true"></icourse-button>
-        <icourse-button [size]="'medium'"></icourse-button>
-        <icourse-button [size]="'medium'" [disabled]="true"></icourse-button>
-        <icourse-button [size]="'small'"></icourse-button>
-        <icourse-button [size]="'small'" [disabled]="true"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'large'"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'large'" [disabled]="true"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'medium'"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'medium'" [disabled]="true"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'small'"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true"></icourse-button>
-        <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true" [icon]="true"></icourse-button>
-        <icourse-button [variant]="'secondary'" [iconRight]="true" [iconRightName]="'heart'" [iconName]="'plus'"
-            [icon]="true" [twoIcons]="false"></icourse-button>
+  <div class="w-full">
+    <p>welcome-card</p>
+    <icourse-atom-card></icourse-atom-card>
+  </div>
+  <!-- <icourse-error></icourse-error> -->
+  <icourse-login></icourse-login>
+  <div class="flex flex-col gap-5">
+    <p>buttons</p>
+    <icourse-button [size]="'large'" [icon]="true"></icourse-button>
+    <icourse-button [size]="'large'" [disabled]="true"></icourse-button>
+    <icourse-button [size]="'medium'"></icourse-button>
+    <icourse-button [size]="'medium'" [disabled]="true"></icourse-button>
+    <icourse-button [size]="'small'"></icourse-button>
+    <icourse-button [size]="'small'" [disabled]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'large'"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'large'" [disabled]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'medium'"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'medium'" [disabled]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'small'"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" [size]="'small'" [disabled]="true" [icon]="true"></icourse-button>
+    <icourse-button [variant]="'secondary'" [iconRight]="true" [iconRightName]="'heart'" [iconName]="'plus'"
+      [icon]="true" [twoIcons]="false"></icourse-button>
 
-    </div>
+  </div>
 
-    <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>inputs</p>
-        <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"></icourse-input>
-        <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"
-            [size]="'medium'"></icourse-input>
-        <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"
-            [size]="'small'"></icourse-input>
-        <icourse-input [leftIcon]="true" [leftIconName]="'envelope'"></icourse-input>
-        <icourse-input [rightIcon]="true" [rightIconName]="'envelope'"></icourse-input>
-        <icourse-input [rightIcon]="true" [rightIconName]="'envelope'" [leftIcon]="true"
-            [leftIconName]="'envelope'"></icourse-input>
-        <icourse-input></icourse-input>
-        <icourse-input></icourse-input>
-        <icourse-input [disabled]="true" [label]="''"></icourse-input>
-    </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>inputs</p>
+    <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"></icourse-input>
+    <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"
+      [size]="'medium'"></icourse-input>
+    <icourse-input [inputType]="'email'" [placeholder]="'Enter your e-mail...'" [label]="''"
+      [size]="'small'"></icourse-input>
+    <icourse-input [leftIcon]="true" [leftIconName]="'envelope'"></icourse-input>
+    <icourse-input [rightIcon]="true" [rightIconName]="'envelope'"></icourse-input>
+    <icourse-input [rightIcon]="true" [rightIconName]="'envelope'" [leftIcon]="true"
+      [leftIconName]="'envelope'"></icourse-input>
+    <icourse-input></icourse-input>
+    <icourse-input></icourse-input>
+    <icourse-input [disabled]="true" [label]="''"></icourse-input>
+  </div>
 
-    <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>ai card</p>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>ai card</p>
 
-        <icourse-ai-card></icourse-ai-card>
-    </div>
-    <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>peron-card</p>
-        <icourse-person-card></icourse-person-card>
-    </div>
+    <icourse-ai-card></icourse-ai-card>
+  </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>peron-card</p>
+    <icourse-person-card></icourse-person-card>
+  </div>
 
-    <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>progress-card</p>
-        <icourse-progress-card></icourse-progress-card>
-        <icourse-progress-card [direction]="'imgRight'"></icourse-progress-card>
-        <icourse-progress-card [variant]="'video'"
-                               [btnText]="'استكمال مشاهدة'"></icourse-progress-card>
-    </div>
-    <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>info-card</p>
-      <icourse-info-card></icourse-info-card>
-    </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>progress-card</p>
+    <icourse-progress-card></icourse-progress-card>
+    <icourse-progress-card [direction]="'imgRight'"></icourse-progress-card>
+    <icourse-progress-card [variant]="'video'" [btnText]="'استكمال مشاهدة'"></icourse-progress-card>
+  </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>info-card</p>
+    <icourse-info-card></icourse-info-card>
+  </div>
 
-     <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>feedback-card</p>
-      <icourse-feedback-card></icourse-feedback-card>
-    </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>feedback-card</p>
+    <icourse-feedback-card></icourse-feedback-card>
+  </div>
 
-      <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>data-card</p>
-      <icourse-data-card></icourse-data-card>
-      <icourse-data-card [type]="'large'" [paginate]="true"></icourse-data-card>
-    </div>
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>data-card</p>
+    <icourse-data-card></icourse-data-card>
+    <icourse-data-card [type]="'large'" [paginate]="true"></icourse-data-card>
+  </div>
 
-     <div class="flex-1 flex flex-col gap-5 w-full p-6">
-        <p>feature-card</p>
-      <icourse-feature-card></icourse-feature-card>
-    </div>
-<div class="w-full">
-        <p>welcome-card</p>
-      <icourse-welcome-card></icourse-welcome-card>
-    </div> 
+  <div class="flex-1 flex flex-col gap-5 w-full p-6">
+    <p>feature-card</p>
+    <icourse-feature-card></icourse-feature-card>
+  </div>
+  <div class="w-full">
+    <p>welcome-card</p>
+    <icourse-welcome-card></icourse-welcome-card>
+  </div>
+
+ 
 </div>
