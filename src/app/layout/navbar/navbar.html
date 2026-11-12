@@ -1,72 +1,35 @@
-<nav class="bg-white fixed top-0 w-full border-[0.5px] border-gray-200 p-4 z-90">
-    <div class="" [ngClass]="{'flex! justify-between items-center!': !isLoggedIn(),
-                     'flex! justify-center! items-center': isLoggedIn()
-         }">
-        @if(isLoggedIn()){
-       <div class="flex justify-between items-center">
-         <div>
-            <img src="./images/logo.svg" alt="logo" class="w-16.25 h-15">
-        </div>
-        <div>
-            <p class="text-orange-500 font-semibold text-[18px]">
-                العودة الي الصفحة الرئيسية
-            </p>
-        </div>
-       </div>
-        } @else{
-        <div class="flex justify-center gap-10 items-center">
+<nav class="bg-white fixed top-0 w-full border-[0.5px] border-gray-200  z-90">
+
+    <div class="flex justify-between py-3 px-18">
             <div>
-                <img src="./images/logo.svg" alt="logo" class="w-16.25 h-15">
+                <img src="./images/logo.svg" alt="logo" class="w-16.25 h-15" />
             </div>
-            <div class="flex justify-center gap-10 ">
-                <ul class="flex gap-6.5 items-center text-gray-400">
-                    <li><a href="#الرئيسية">الرئيسية</a></li>
-                    <li><a href="#المسارات">المسارات</a></li>
+            <div class="w-108 flex items-center">
+                <ul class="flex justify-center gap-6.5 items-center text-gray-400">
+                    <li><a href="#main" routerLinkActive="text-[#F97416]" routerLink="/" [routerLinkActiveOptions]="{exact: true}">الرئيسية</a></li>
+                    <li><a href="masar" routerLinkActive="text-[#F97416]" routerLink="/courses">المسارات</a></li>
                     <li><a href="">الدعم الفني</a></li>
                     <li><a href="">من نحن</a></li>
                 </ul>
-
-                <div>
-                    <icourse-input [label]="''" [size]="'small'" [placeholder]="'البحث'" [leftIcon]="true"
-                        [leftIconName]="'search'"></icourse-input>
-                </div>
-
-                <div class="flex justify-between gap-9">
-                    <icourse-button [variant]="'secondary'" [text]="'سجل الان'"></icourse-button>
-                    <icourse-button [text]="'تسجيل دخول'"></icourse-button>
-                </div>
             </div>
-        </div>
-        }
+
+
+            <div class="w-109.75">
+                <icourse-input [label]="''" [size]="'small'" [placeholder]="'البحث'" [leftIcon]="true"
+                    [leftIconName]="'search'">
+                </icourse-input>
+            </div>
+            <div class="flex items-center gap-2">
+                <icourse-button [variant]="'secondary'" [text]="'سجل الان'">
+                </icourse-button>
+                <icourse-button [text]="'تسجيل دخول'">
+                </icourse-button>
+            </div>
     </div>
 
-    <!-- <div class="flex  gap-8"
-         [ngClass]="{'flex! justify-between!': !isLoggedIn(),
-                      'flex! justify-center!': isLoggedIn()}">
-        <div class="flex w-full max-w-130.75 justify-between items-center ">
-            <img src="./images/logo.svg" alt="logo" class="w-16.25 h-15">
+   
 
-            <ul class="flex gap-6.5 items-center text-gray-400" 
-                [ngClass]="{'hidden': !isLoggedIn()}">
-                <li><a href="">الرئيسية</a></li>
-                <li><a href="">المسارات</a></li>
-                <li><a href="">الدعم الفني</a></li>
-                <li><a href="">من نحن</a></li>
-            </ul>
-        </div>
-
-        <div class="flex w-full max-w-187.75 justify-between items-center" 
-             [ngClass]="{'hidden': !isLoggedIn()}">
-            <div class="flex-1">
-                <icourse-input [label]="''" [size]="'small'" [placeholder]="'البحث'" [leftIcon]="true"
-                    [leftIconName]="'search'"></icourse-input>
-            </div>
-
-            <div class="flex justify-between gap-9 pr-8">
-                <icourse-button [variant]="'secondary'" [text]="'سجل الان'"></icourse-button>
-                <icourse-button [text]="'تسجيل دخول'"></icourse-button>
-            </div>
-        </div>
+   <!--
         @if(!isLoggedIn()){
         <div class="flex items-center">
             <p class="text-orange-500 font-semibold text-[18px] cursor-pointer">

@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'icourse-masar',
-  imports: [FeatureCard, Button, CommonModule, RouterModule],
+  imports: [FeatureCard, Button, CommonModule],
   templateUrl: './masar.html',
 })
 export class Masar {
